@@ -1,0 +1,270 @@
+/* Ranglar va umumiy sozlamalar */
+.mornride-hero-container {
+  background-color: #1a191d; /* Rasmdagi to'q qora-kulrang fon */
+  color: #ffffff;
+  font-family: 'Arial', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+/* --- Top Header --- */
+.top-header {
+  background-color: #262429;
+  padding: 8px 50px;
+  font-size: 0.9rem;
+}
+
+.top-header-content {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* --- Navbar --- */
+.mornride-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background-color: #1a191d;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.navbar-logo {
+  font-size: 1.8rem;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.navbar-links {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.navbar-links a:hover {
+  color: #27c9be; /* Yengil neon hover effekti */
+}
+
+/* Qidiruv paneli */
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.search-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-box input {
+  background-color: #403e43;
+  border: none;
+  border-radius: 50px;
+  padding: 10px 45px 10px 20px;
+  color: white;
+  width: 220px;
+  font-size: 0.9rem;
+  outline: none;
+}
+
+.search-btn {
+  position: absolute;
+  right: 15px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #b3b2b4;
+}
+
+.cart-icon {
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.cart-icon:hover {
+  transform: scale(1.15);
+}
+
+.profile-avatar img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  object-fit: cover;
+  border: 1px solid #555;
+}
+
+/* --- Hero Asosiy Blok (Konteyner markazlashtirildi) --- */
+.hero-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 50px;
+  flex: 1;
+  max-width: 1200px;     /* Elementlar juda kengayib, sochilib ketmasligi uchun */
+  margin: 0 auto;        /* Butun blokni ekranning o'rtasiga tekislaydi */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.hero-text-side {
+  max-width: 50%;        /* Matnga aniq 50% joy ajratildi */
+  z-index: 5;
+  text-align: left;
+}
+
+.limited-badge {
+  display: inline-block;
+  border: 1px solid #5c5a5f;
+  border-radius: 50px;
+  padding: 8px 20px;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  color: #b3b2b4;
+  margin-bottom: 30px;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: bold;
+  line-height: 1.15;
+  margin-bottom: 30px;
+  letter-spacing: -0.5px;
+}
+
+.hero-description {
+  color: #b3b2b4;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+/* Tugmalar va ularning effektlari */
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.btn-buy {
+  background-color: #ffffff;
+  color: #000000;
+  border: none;
+  padding: 15px 35px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.btn-buy:hover {
+  background-color: #e0e0e0;
+  transform: translateY(-3px);
+}
+
+.btn-view {
+  background-color: transparent;
+  color: #ffffff;
+  border: 1px solid #5c5a5f;
+  padding: 15px 35px;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.btn-view:hover {
+  border-color: #ffffff;
+  transform: translateY(-3px);
+}
+
+/* Rasm Bloki */
+.hero-image-side {
+  max-width: 50%;        /* Rasmga aniq 50% joy ajratildi */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dynamic-bike-img {
+  width: 100%;
+  max-width: 500px;
+  height: 420px;         /* Rasmlar o'zgarganda bo'yi o'ynab sakramasligi uchun */
+  object-fit: contain;   /* Rasm proporsiyasi buzilmaydi */
+}
+
+/* --- RESPONSIVLIK (MOBILE & TABLET ADAPTATION) --- */
+@media (max-width: 1024px) {
+  .hero-main {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 40px;
+    padding: 30px 20px;
+  }
+
+  .hero-text-side {
+    max-width: 100%;
+  }
+
+  .hero-image-side {
+    max-width: 100%;
+    justify-content: center;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .navbar-links {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .mornride-navbar {
+    padding: 15px 20px;
+  }
+  
+  .search-box input {
+    width: 140px;
+  }
+
+  .hero-title {
+    font-size: 1.9rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .btn-buy, .btn-view {
+    width: 100%;
+  }
+}
